@@ -29,14 +29,14 @@ M2 = cm2*[19272  1458*L  5928  -642*L    0     0;
           5928   642*L   38544  0       5928  -642*L;
           -642*L -73*L   0      344*L^2 642*L -73*L^3;
           0       0      5928   642*L   19272 -1458*L;
-          0       0     -642*L -73*L^2 -1458*L 172*L^2];
-M2 = M2 + [0 0 0 0 0  0;
-           0 0 0 0 0  0;
-           0 0 0 0 0  0;
-           0 0 0 0 0  0;
-           0 0 0 0 MT ST;
-           0 0 0 0 ST IT];
-
+          0       0     -642*L -73*L^2 -1458*L 172*L^2] ...
+...
+       + [0       0      0      0       0      0;
+          0       0      0      0       0      0;
+          0       0      0      0       0      0;
+          0       0      0      0       0      0;
+          0       0      0      0       MT     ST;
+          0       0      0      0       ST     IT];
 
 K2 = ck2*[24  6*L   -24  6*L    0   0;
           6*L 2*L^2 -6*L L^2    0   0;
@@ -51,7 +51,7 @@ K2 = K2(3:end, 3:end);
 
 f = @(omega) det(K2 - (omega^2)*M2); % eigenfrequencies are where the determinant is zero
 
-% scroll through all the frequencies and figure out where it's crosses zero
+% scroll through all the frequencies and figure out where the function crosses zero
 prev = 1;
 count = 0;
 freq = 0.01;

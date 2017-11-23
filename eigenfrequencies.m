@@ -71,4 +71,4 @@ prev_f = 0;
 fplot(f, [min(omega_range), max(omega_range)], 'linewidth', 2)
 plot(omega_range, zeros(1, length(omega_range)));
 xlabel('Frequency (radians/sec)')
-title('Determinant of K - \omega M')
+title('Determinant of K - \omega^2M')

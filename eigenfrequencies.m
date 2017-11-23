@@ -55,7 +55,7 @@ count = 0;
 freq = 0.01;
 while count < 3
   this = f(freq);
-  if prev * this < 1 % change sign
+  if prev * this < 0 % change sign
     fprintf('%f Hz\n', freq/(2*pi));
     count = count + 1;
   end
@@ -71,4 +71,4 @@ prev_f = 0;
 fplot(f, [min(omega_range), max(omega_range)], 'linewidth', 2)
 plot(omega_range, zeros(1, length(omega_range)));
 xlabel('Frequency (radians/sec)')
-
+title('Determinant of K - \omega M')

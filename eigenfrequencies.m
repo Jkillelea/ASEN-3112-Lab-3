@@ -62,3 +62,13 @@ while count < 3
   prev = this;
   freq = freq + 0.005;
 end
+
+% plot things
+figure; hold on; grid on;
+omega_range = 0:1350;
+prev_o = 0;
+prev_f = 0;
+fplot(f, [min(omega_range), max(omega_range)], 'linewidth', 2)
+plot(omega_range, zeros(1, length(omega_range)));
+xlabel('Frequency (radians/sec)')
+

@@ -2,8 +2,6 @@
 clear all;
 clc;
 
-syms omega;
-
 L   = 12;        % inches, shaker-start-tail span
 w   = 1;         % inch, width (all members)
 h   = 1/8;       % inch, fuselage and wing thickness
